@@ -1,26 +1,38 @@
 package com.fiap.cp2.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 
 @Entity
-@Table(name = "CP2_Brinquedo")
+@Table(name = "CP2_BRINQUEDO")
+@SequenceGenerator(name = "brinq", sequenceName = "SQ_CP2_BRINQUEDO", allocationSize = 1)
 
 
 public class Brinquedo {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_brinquedo")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "brinq")
+	private Integer id;
 	
-	private int id;
-	
+	@Column(name = "nm_brinquedo", nullable = false, length = 80)
 	private String nome;
+	
+	@Column(name = "tipo_brinquedo", nullable = false, length = 50)
 	private String tipo;
+	
+	@Column(name = "classificacao_brinquedo", nullable = false, length = 30)
 	private String classificacao;
+	
+	@Column(name = "tamanho_brinquedo", nullable = false, length = 20)
 	private String tamanho;
+	
+	@Column(name = "preco_brinquedo", nullable = false)
 	private Double preco;
 	
 	
@@ -29,9 +41,8 @@ public class Brinquedo {
 	}
 
 
-	public Brinquedo(int id, String nome, String tipo, String classificacao, String tamanho, Double preco) {
+	public Brinquedo(String nome, String tipo, String classificacao, String tamanho, Double preco) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.tipo = tipo;
 		this.classificacao = classificacao;
@@ -40,12 +51,12 @@ public class Brinquedo {
 	}
 
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
