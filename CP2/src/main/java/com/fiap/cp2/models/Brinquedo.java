@@ -11,8 +11,6 @@ import jakarta.persistence.SequenceGenerator;
 @Entity
 @Table(name = "CP2_BRINQUEDO")
 @SequenceGenerator(name = "brinq", sequenceName = "SQ_CP2_BRINQUEDO", allocationSize = 1)
-
-
 public class Brinquedo {
 	
 	@Id

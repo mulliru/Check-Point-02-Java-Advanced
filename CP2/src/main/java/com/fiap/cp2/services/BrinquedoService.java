@@ -8,6 +8,6 @@ import java.util.Optional;
 public interface BrinquedoService {
 
         Brinquedo create(Brinquedo brinquedo);
-        Optional<Brinquedo> read(Integer id);
+        Brinquedo read(Integer id);
         List<Brinquedo> getAll();
 }
