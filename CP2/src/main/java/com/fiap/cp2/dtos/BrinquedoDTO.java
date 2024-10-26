@@ -1,4 +1,4 @@
-package com.fiap.cp2.dto;
+package com.fiap.cp2.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -28,19 +28,6 @@ public class BrinquedoDTO {
     @NotNull(message = "O preço do brinquedo é obrigatório")
     @Positive(message = "O preço deve ser maior que zero")
     private Double preco;
-
-    // Construtor padrão
-    public BrinquedoDTO() {}
-
-    // Construtor com parâmetros
-    public BrinquedoDTO(Integer id, String nome, String tipo, String classificacao, String tamanho, Double preco) {
-        this.id = id;
-        this.nome = nome;
-        this.tipo = tipo;
-        this.classificacao = classificacao;
-        this.tamanho = tamanho;
-        this.preco = preco;
-    }
 
     // Getters e Setters
     public Integer getId() {
