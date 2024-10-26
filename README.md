@@ -45,3 +45,9 @@ Ao realizar uma requisição **POST** para cadastrar um brinquedo, use o seguint
   "tamanho": "30 cm",
   "preco": 120.00
 }
+```
+
+### Prints do POSTMAN
+
+![image](https://github.com/user-attachments/assets/fcb3bb56-de5a-4028-a45a-c618270ca054)
+![image](https://github.com/user-attachments/assets/e8d097bc-0b30-48f8-8dc0-260025cfca63)
